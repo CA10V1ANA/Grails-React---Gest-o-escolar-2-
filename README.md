@@ -32,3 +32,14 @@ Aplicação desenvolvida em **Grails 5** para gerenciar **Alunos, Cursos e Matr�
 ```bash
 git clone https://github.com/seu-usuario/meu-projeto-grails.git
 cd meu-projeto-grails
+
+
+📝 Funcionalidades
+CRUD de Alunos
+
+- CRUD de Cursos
+- Matrículas de alunos em cursos
+- API JSON para operações CRUD
+- Páginas web básicas com GSP
+
+
