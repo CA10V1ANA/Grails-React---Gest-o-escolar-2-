@@ -1,4 +1,4 @@
-Projeto Grails - Gerenciamento de Alunos e Cursos
+Projeto Grails - Gerenciamento de Alunos, Matrículas e Cursos
 
 Aplicação desenvolvida em **Grails 5** para gerenciar **Alunos, Cursos e Matrículas**, com interface web básica (GSP) e API JSON para integração.
 
