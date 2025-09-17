@@ -1,0 +1,109 @@
+---
+grails:
+    plugin:
+        cors:
+            enabled: true
+            url:
+                pattern: '/**'
+            allowed:
+                origins: '*'
+                methods:
+                    - GET
+                    - POST
+                    - PUT
+                    - DELETE
+                    - OPTIONS
+    profiles:
+        reload:
+            enabled: true
+    codegen:
+        defaultPackage: escolaa
+    spring:
+        transactionManagement:
+            proxies: false
+    gorm:
+        reactor:
+            events: false
+    mime:
+        disable:
+            accept:
+                header:
+                    userAgents:
+                        - Gecko
+                        - WebKit
+                        - Presto
+                        - Trident
+        types:
+            html:
+                - text/html
+                - application/xhtml+xml
+            xml:
+                - text/xml
+                - application/xml
+            text:
+                - text/plain
+            js:
+                - text/javascript
+            rss:
+                - application/rss+xml
+            atom:
+                - application/atom+xml
+            css:
+                - text/css
+            csv:
+                - text/csv
+            json:
+                - application/json
+                - text/json
+            form:
+                - application/x-www-form-urlencoded
+            multipartForm:
+                - multipart/form-data
+            all:
+                - "*/*"
+
+    urlmapping:
+        cache:
+            maxsize: 1000
+
+    controllers:
+        defaultScope: singleton
+
+    converters:
+        encoding: UTF-8
+
+    views:
+        default:
+            codec: html
+        gsp:
+            encoding: UTF-8
+            htmlcodec: xml
+            codecs:
+                expression: html
+                scriptlets: html
+                taglib: none
+                staticparts: none
+
+dataSource:
+    pooled: true
+    jmxExport: true
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: caio123
+    password: "12345"
+    dbCreate: update
+    dialect: org.hibernate.dialect.MySQL8Dialect
+    url: jdbc:mysql://localhost:3308/escola?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+
+
+    development:
+        dataSource:
+            dbCreate: update
+            url: jdbc:mysql://localhost:3308/escola?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    test:
+        dataSource:
+            dbCreate: update
+            url: jdbc:mysql://localhost:3308/escola?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    production:
+        dataSource:
+            dbCreate: update
+            url: jdbc:mysql://localhost:3308/escola?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
